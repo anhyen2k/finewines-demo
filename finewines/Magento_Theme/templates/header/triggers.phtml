@@ -1,0 +1,16 @@
+<div class="header-items">
+    <a class="login" href="/customer/account/login/">Log ind</a>
+    <a class="action toggle-search" href="">Søg</a>
+</div>
+
+<script>
+require(['jquery'], function($) {
+    $(document).ready(function() {
+        $(".toggle-search").click(function(e) {
+            e.preventDefault();
+
+            $(".block-search").slideToggle("slow");
+        });
+    });
+});
+</script>

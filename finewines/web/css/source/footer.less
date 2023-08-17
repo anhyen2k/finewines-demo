@@ -1,0 +1,102 @@
+.footer.content {
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    .page-footer-item {
+        width: 100%;
+        padding-top: 75px;
+        padding-bottom: 40px;
+        background-color: #000000;
+
+        .footer-content {
+            padding: 0 30px;
+
+            .footer-blocks {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 50px;
+
+                .logo-footer {
+                    img {
+                        width: 160px;
+                        height: 20px;
+                    }
+
+                    .footer-content-child {
+                        p>a {
+                            font-family: @font-family__interstate;
+                            color: #fff;
+                            text-decoration: underline;
+                            text-underline-position: under;
+                            font-size: 15px;
+                        }
+
+                        p {
+                            font-family: @font-family__interstate;
+                            margin-bottom: 24px;
+                            font-size: 15px;
+                            color: #d4d4d4;
+                        }
+                    }
+                }
+            }
+
+            .footer-link {
+                h2 {
+                    font-size: 15px;
+                    color: #cca681;
+                }
+
+                .link-list {
+                    column-count: 2;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .link-list>li {
+                    margin-bottom: 10px;
+                }
+
+                .link-list>li>a {
+                    font-family: @font-family__interstate;
+                    font-size: 13px;
+                    color: #d4d4d4;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #cca681;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @desktop) {
+    .footer.content > .page-footer-item >.footer-content > .footer-blocks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer.content > .page-footer-item >.footer-content > .footer-blocks {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (max-width: @tablet) {
+    .footer.content {
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+}
+
+

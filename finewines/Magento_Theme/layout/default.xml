@@ -1,0 +1,37 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">300</argument>
+                <argument name="logo_img_height" xsi:type="number">300</argument>
+                <argument name="htmlClass" xsi:type="string">logo_img_header</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="header.panel" remove="true"/>
+        <!-- <referenceBlock name="footer-container" remove="true"/> -->
+        <referenceBlock name="store_switcher" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceContainer name="header-wrapper">
+            <container name="header.triggers" htmlTag="div" htmlClass="header-triggers">
+                <block class="Magento\Customer\Block\Account\AuthorizationLink" name="triggers" template="Magento_Theme::header/triggers.phtml" />
+                <block class="Magento\Customer\Block\Account\Customer" name="customer" template="Magento_Customer::account/customer.phtml" before="-"/>
+            </container>
+        </referenceContainer>
+
+        <block class="Magento\Framework\View\Element\Template" name="home-top" template="Magento_Theme::header/home-top.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="footer-block" template="Magento_Theme::footer/footer.phtml"/>
+
+        <!-- <move element="top.search" destination="header.triggers" /> -->
+        <!-- <move element="header-items" destination="header.triggers" /> -->
+        <move element="home-top" destination="header.container" before="header-wrapper"/>
+        <move element="footer-block" destination="footer"/>
+        <move element="form.subscribe" destination="email-block"/>
+        <move element="top.search" destination="page.top" after="navigation"/>
+        <move element="minicart" destination="header.triggers" />
+        <move element="header-items" destination="header-wrapper"/>
+    </body>
+</page>

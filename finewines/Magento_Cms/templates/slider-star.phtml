@@ -1,0 +1,57 @@
+<div class="slider-star-container">
+    <div class="slider-star">
+        <div class="slider-star1">
+            <div class="star-img">
+                <img class="slider__image" src="<?= $block->getViewFileUrl('images/slider-star/1.png'); ?>" />
+            </div>
+            <div class="text-content">
+                <p>“De kan bare deres kram.
+                    <br>
+                    Tak igen, for fantastisk service, stor viden, hurtig respons og gode priser.” -
+                    <strong>StenHansen</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="slider-star2">
+            <div class="star-img">
+                <img class="slider__image" src="<?= $block->getViewFileUrl('images/slider-star/1.png'); ?>" />
+            </div>
+            <div class="text-content">
+                <p>“De kan bare deres kram.
+                    <br>
+                    Tak igen, for fantastisk service, stor viden, hurtig respons og gode priser.”
+                </p>
+            </div>
+        </div>
+
+        <div class="slider-star3">
+            <div class="star-img">
+                <img class="slider__image" src="<?= $block->getViewFileUrl('images/slider-star/1.png'); ?>" />
+            </div>
+            <div class="text-content">
+                <p>“De kan bare deres kram.
+                    <br>
+                    Tak igen, for fantastisk service, stor viden, hurtig respons og gode priser.”
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+require(['jquery', 'slick'], function($) {
+    $(document).ready(function() {
+        $('.slider-star').slick({
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            // vertical: true,
+            cssEase: 'linear'
+        });
+    });
+});
+</script>

@@ -1,0 +1,36 @@
+
+    <div class="slider__wrapper">
+        <div class="slide">
+            <a href="#">
+                <picture>
+                    <source media="(max-width:768px)"
+                        srcset="<?= $block->getViewFileUrl('images/slider/sldm1.webp'); ?>">
+                    <img class="slider__image" src="<?= $block->getViewFileUrl('images/slider/sld1.webp'); ?>" />
+                </picture>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="#">
+                <picture>
+                    <source media="(max-width:768px)"
+                        srcset="<?= $block->getViewFileUrl('images/slider/sldm2.webp'); ?>">
+                    <img class="slider__image" src="<?= $block->getViewFileUrl('images/slider/sld2.webp'); ?>" />
+                </picture>
+            </a>
+        </div>
+    </div>
+
+<script type="text/javascript">
+require(['jquery', 'slick'], function($) {
+    $('.slider__wrapper').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        // dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+});
+</script>

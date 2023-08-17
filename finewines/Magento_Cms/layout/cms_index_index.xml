@@ -1,0 +1,33 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <block class="Magento\Framework\View\Element\Template" name="slider" template="Magento_Cms::slider.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="content-header" template="Magento_Cms::content-header.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="content-box" template="Magento_Cms::content-box.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="content-box-2" template="Magento_Cms::content-box-2.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="email-block" template="Magento_Cms::email-block.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="slider-star" template="Magento_Cms::slider-star.phtml"/>
+
+        <move element="slider" destination="main" before="-"/>
+        <move element="content-header" destination="main" after="slider"/>
+        <move element="content-box" destination="main" after="content"/>
+        <move element="content-box-2" destination="main" after="content-box"/>
+        <move element="email-block" destination="main" after="content-box-2"/>
+        <move element="form.subscribe" destination="email-block"/>
+        <move element="slider-star" destination="main" after="email-block"/>
+
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Block" name="section.block1">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">section1</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <block class="Magento\Cms\Block\Block" name="section.block2">
+            <arguments>
+                <argument name="block_id" xsi:type="string">section.block2</argument>
+            </arguments>
+        </block>
+        <move element="section.block2" destination="main" after="content-box"/>
+    </body>
+</page>

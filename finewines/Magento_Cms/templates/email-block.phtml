@@ -1,0 +1,18 @@
+<div class="email-block-container">
+    <div class="email-block">
+        <div class="content-email">
+            <h3 class="heading">Hold dig opdateret</h3>
+            <h2 class="title">Tilmeld dig vores nyhedsbrev</h2>
+            <p>Få direkte besked på din mail når vi får nye
+                <br>
+                spændende vine eller årgange hjem
+            </p>
+            <?php $formBlock = $block->getLayout()->getBlock('form.subscribe'); ?>
+            <?php if ($formBlock): ?>
+            <div id="form-container">
+                <?php echo $formBlock->toHtml(); ?>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+@desktop: 1024px;
+@tablet: 768px;
+@mobile: 480px;
+
+
+// content-box:
+
+@media (max-width: @tablet) {
+    .block.newsletter {
+        display: flex;
+        flex-direction: column;
+
+        .form.subscribe {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 575px;
+        }
+    }
+}
